@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import App from '../imports/ui/App.jsx';
-import Example from '../imports/ui/Example';
+import New from '../imports/ui/New';
 import Lost from '../imports/ui/Lost';
 
 Meteor.startup(() => {
@@ -12,7 +12,7 @@ Meteor.startup(() => {
     <Router>
       <Switch>
         <Route exact path="/" component={App}/>
-        <Route path="/example" component={Example}/>
+        <Route path="/new" component={New}/>
         <Route component={Lost}/>
       </Switch>
     </Router>
