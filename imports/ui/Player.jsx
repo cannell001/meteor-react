@@ -28,6 +28,7 @@ export default class Player extends Component {
           <img src="player.jpg" />
         </CardMedia>
         <CardText>
+        <div style={styles.wrapper}>
           <Chip
           backgroundColor={blue200}
           style={styles.chip}
@@ -109,6 +110,7 @@ export default class Player extends Component {
           </Avatar>
           Playmaking risks
         </Chip>
+        </div>
         </CardText>
         <CardActions>
 
