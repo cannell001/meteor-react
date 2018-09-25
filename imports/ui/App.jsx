@@ -5,6 +5,7 @@ import AppBar from 'material-ui/AppBar';
 import { List } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import uuid from 'uuid';
 
 import TeamList from './Team-list';
@@ -81,7 +82,7 @@ export default class App extends Component {
           <div className="row">
             <div className="col s12 m7" ><Player /></div>
                 <div className="col s12 m5" >
-                    <h2>Team List</h2>{/*<Link to="/new" addPlayer={this.addPlayer}className="waves-effect waaves-light btn">Add Player</Link>*/}
+                    <h2>Team List</h2><Link to="/new" className="waves-effect waves-light btn">Add Player</Link>
                     <Divider/>
                       <List>
                         {this.renderPlayers()}
@@ -89,7 +90,9 @@ export default class App extends Component {
                     <Divider/>
                 </div>
             <div className="col s12 m5" ><TeamStats /></div>
-            <New addPlayer={this.addPlayer}/>
+            {/* <New addPlayer={this.addPlayer}/> */}
+            <Route path="/new" render={props => <New addPlayer = {this.addPlayer} />} />
+
           </div>
         </div>
       </MuiThemeProvider>
