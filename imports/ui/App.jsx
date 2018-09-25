@@ -91,8 +91,7 @@ export default class App extends Component {
                 </div>
             <div className="col s12 m5" ><TeamStats /></div>
             {/* <New addPlayer={this.addPlayer}/> */}
-            <Route path="/new" render={props => <New addPlayer = {this.addPlayer} />} />
-
+            
           </div>
         </div>
       </MuiThemeProvider>

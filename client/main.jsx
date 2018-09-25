@@ -15,7 +15,8 @@ Meteor.startup(() => {
     <Router>
       <Switch>
         <Route exact path="/" component={App}/>
-        <Route path="/new" render={props => <New addPlayer = {this.addPlayer} />} />
+        <Route exact path="/new" render={props => <New addPlayer = {this.addPlayer} />} />
+
         <Route component={Lost}/>
       </Switch>
     </Router>
